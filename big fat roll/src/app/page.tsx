@@ -5,26 +5,26 @@ import { MapPin, Menu as MenuIcon, X, ChevronLeft, ChevronRight, Flame, Star, Cl
 import Image from 'next/image';
 
 const ROLLS = [
-  { id:1, name:'Big Fat Crispy Roll', desc:'Our signature crispy bite with indulgent sauces and fresh veggies.', price:'₹249', tag:'🔥 Bestseller', image:'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=800' },
-  { id:2, name:'Peri-Peri Chicken Roll', desc:'Spicy, bold, and packed with flavor. A true crowd favorite.', price:'₹229', tag:'🌶️ Spicy', image:'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=800' },
-  { id:3, name:'Creamy Paneer Tikka Wrap', desc:'Soft paneer marinated in rich spices, wrapped to perfection.', price:'₹199', tag:'🌿 Veg', image:'https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800' },
-  { id:4, name:'Classic Falafel Roll', desc:'Mediterranean style wrap with crispy falafels and hummus.', price:'₹179', tag:'🌿 Veg', image:'https://images.unsplash.com/photo-1540914124281-342587941389?q=80&w=800' },
-  { id:5, name:'Spicy Mushroom Roll', desc:'Sautéed mushrooms in our secret fiery sauce.', price:'₹189', tag:'🌿 Veg', image:'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?q=80&w=800' },
+  { id: 1, name: 'Big Fat Crispy Roll', desc: 'Our signature crispy bite with indulgent sauces and fresh veggies.', price: '₹249', tag: '🔥 Bestseller', image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=800' },
+  { id: 2, name: 'Peri-Peri Chicken Roll', desc: 'Spicy, bold, and packed with flavor. A true crowd favorite.', price: '₹229', tag: '🌶️ Spicy', image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=800' },
+  { id: 3, name: 'Creamy Paneer Tikka Wrap', desc: 'Soft paneer marinated in rich spices, wrapped to perfection.', price: '₹199', tag: '🌿 Veg', image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800' },
+  { id: 4, name: 'Classic Falafel Roll', desc: 'Mediterranean style wrap with crispy falafels and hummus.', price: '₹179', tag: '🌿 Veg', image: 'https://images.unsplash.com/photo-1540914124281-342587941389?q=80&w=800' },
+  { id: 5, name: 'Spicy Mushroom Roll', desc: 'Sautéed mushrooms in our secret fiery sauce.', price: '₹189', tag: '🌿 Veg', image: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?q=80&w=800' },
 ];
 const BURGERS = [
-  { id:6, name:'Double Smash Burger', desc:'Double patty, melted cheese, and our secret indulgent sauce.', price:'₹299', tag:'⭐ Premium', image:'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800' },
-  { id:7, name:'Crispy Chicken Burger', desc:'Golden fried chicken breast with spicy mayo.', price:'₹249', tag:'🔥 Popular', image:'https://images.unsplash.com/photo-1610440042657-612c34d95e9f?q=80&w=800' },
-  { id:8, name:'Loaded Fries', desc:'Crispy fries topped with liquid cheese and jalapenos.', price:'₹149', tag:'🧀 Cheesy', image:'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=800' },
-  { id:9, name:'Onion Rings', desc:'Golden crispy onion rings with our signature dip.', price:'₹119', tag:'🥇 Classic', image:'https://images.unsplash.com/photo-1639024470080-6bc1508db832?q=80&w=800' },
+  { id: 6, name: 'Double Smash Burger', desc: 'Double patty, melted cheese, and our secret indulgent sauce.', price: '₹299', tag: '⭐ Premium', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800' },
+  { id: 7, name: 'Crispy Chicken Burger', desc: 'Golden fried chicken breast with spicy mayo.', price: '₹249', tag: '🔥 Popular', image: 'https://images.unsplash.com/photo-1610440042657-612c34d95e9f?q=80&w=800' },
+  { id: 8, name: 'Loaded Fries', desc: 'Crispy fries topped with liquid cheese and jalapenos.', price: '₹149', tag: '🧀 Cheesy', image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=800' },
+  { id: 9, name: 'Onion Rings', desc: 'Golden crispy onion rings with our signature dip.', price: '₹119', tag: '🥇 Classic', image: 'https://images.unsplash.com/photo-1639024470080-6bc1508db832?q=80&w=800' },
 ];
 const DRINKS = [
-  { id:10, name:'Iced Chocolate', desc:'Rich chocolate blended with cold milk and ice.', price:'₹199', tag:'❄️ Chilled', image:'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=800' },
-  { id:11, name:'Berry Blast Mocktail', desc:'Refreshing mixed berries with a hint of mint.', price:'₹149', tag:'🍓 Fruity', image:'https://images.unsplash.com/photo-1546171753-97d7676e4602?q=80&w=800' },
-  { id:12, name:'Virgin Mojito', desc:'Classic mint, lime, and soda cooler.', price:'₹129', tag:'🍃 Fresh', image:'https://images.unsplash.com/photo-1536935338788-846bb9981813?q=80&w=800' },
-  { id:13, name:'Mango Thickshake', desc:'Rich mango puree and premium ice cream.', price:'₹219', tag:'🥭 Tropical', image:'https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?q=80&w=800' },
+  { id: 10, name: 'Iced Chocolate', desc: 'Rich chocolate blended with cold milk and ice.', price: '₹199', tag: '❄️ Chilled', image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=800' },
+  { id: 11, name: 'Berry Blast Mocktail', desc: 'Refreshing mixed berries with a hint of mint.', price: '₹149', tag: '🍓 Fruity', image: 'https://images.unsplash.com/photo-1546171753-97d7676e4602?q=80&w=800' },
+  { id: 12, name: 'Virgin Mojito', desc: 'Classic mint, lime, and soda cooler.', price: '₹129', tag: '🍃 Fresh', image: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?q=80&w=800' },
+  { id: 13, name: 'Mango Thickshake', desc: 'Rich mango puree and premium ice cream.', price: '₹219', tag: '🥭 Tropical', image: 'https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?q=80&w=800' },
 ];
 
-function Slider({ items, dark=true }: { items: typeof ROLLS; dark?: boolean }) {
+function Slider({ items, dark = true }: { items: typeof ROLLS; dark?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   const scroll = (dir: number) => ref.current?.scrollBy({ left: dir * 340, behavior: 'smooth' });
 
@@ -53,7 +53,7 @@ function Slider({ items, dark=true }: { items: typeof ROLLS; dark?: boolean }) {
       </button>
       <div ref={ref} className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-4 px-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {[...items, ...items].map((item, i) => (
-          <motion.div key={`${item.id}-${i}`} initial={{ opacity:0, y:40 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:false, amount:0.2 }} transition={{ duration:0.5, delay: (i % items.length)*0.1 }}
+          <motion.div key={`${item.id}-${i}`} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: (i % items.length) * 0.1 }}
             className={`min-w-[85vw] sm:min-w-[45vw] md:min-w-[30vw] lg:min-w-[22vw] snap-center shrink-0 rounded-3xl overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 ${dark ? 'glass-card hover:shadow-[0_20px_60px_rgba(255,74,28,0.15)]' : 'glass-card-light hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)]'}`}
           >
             <div className="relative h-52 overflow-hidden">
@@ -109,31 +109,31 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handler);
   }, []);
 
-  const stagger = { hidden:{}, visible:{ transition:{ staggerChildren:0.15 } } };
-  const fadeUp = { hidden:{ opacity:0, y:30 }, visible:{ opacity:1, y:0, transition:{ duration:0.6 } } };
+  const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.15 } } };
+  const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 
   // Bi-directional animation variants with spring physics for smoother, eye-catching motion
-  const springTransition = { type: 'spring' as const, stiffness: 60, damping: 15, mass: 1 };
-  const slideFromLeft = { initial:{ opacity:0, x:-80, scale:0.95 }, whileInView:{ opacity:1, x:0, scale:1 }, transition: springTransition };
-  const slideFromRight = { initial:{ opacity:0, x:80, scale:0.95 }, whileInView:{ opacity:1, x:0, scale:1 }, transition: springTransition };
-  const scaleUp = { initial:{ opacity:0, scale:0.85, y:40 }, whileInView:{ opacity:1, scale:1, y:0 }, transition: springTransition };
-  const rotateIn = { initial:{ opacity:0, rotate:-8, y:40 }, whileInView:{ opacity:1, rotate:0, y:0 }, transition: springTransition };
-  const vp = { once:false, amount:0.1, margin: "0px 0px -50px 0px" };
+  const springTransition: any = { type: 'spring', stiffness: 60, damping: 15, mass: 1 };
+  const slideFromLeft = { initial: { opacity: 0, x: -80, scale: 0.95 }, whileInView: { opacity: 1, x: 0, scale: 1 }, transition: springTransition };
+  const slideFromRight = { initial: { opacity: 0, x: 80, scale: 0.95 }, whileInView: { opacity: 1, x: 0, scale: 1 }, transition: springTransition };
+  const scaleUp = { initial: { opacity: 0, scale: 0.85, y: 40 }, whileInView: { opacity: 1, scale: 1, y: 0 }, transition: springTransition };
+  const rotateIn = { initial: { opacity: 0, rotate: -8, y: 40 }, whileInView: { opacity: 1, rotate: 0, y: 0 }, transition: springTransition };
+  const vp = { once: false, amount: 0.1, margin: "0px 0px -50px 0px" };
 
   return (
     <div className="min-h-screen font-sans bg-[#0A0908] text-white selection:bg-[#FF4A1C] selection:text-white overflow-x-hidden">
 
       {/* NAV */}
-      <motion.nav initial={{ y:-100 }} animate={{ y:0 }} transition={{ duration:0.6 }}
+      <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.6 }}
         className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-black/80 backdrop-blur-xl shadow-2xl shadow-black/20' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
-          <motion.div whileHover={{ scale:1.05 }} className="flex items-center gap-1 cursor-pointer">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-1 cursor-pointer">
             <Flame className="w-7 h-7 text-[#FF4A1C]" />
             <span className="text-2xl font-black tracking-tighter"><span className="text-[#FF4A1C]">BIG FAT</span> ROLL</span>
           </motion.div>
           <div className="hidden md:flex items-center gap-10 text-sm font-bold uppercase tracking-[0.2em] text-stone-300">
-            {['rolls','burgers','drinks','locations'].map(s => (
-              <motion.a key={s} href={`#${s}`} whileHover={{ y:-2, color:'#FF4A1C' }} className="transition-colors relative group">
+            {['rolls', 'burgers', 'drinks', 'locations'].map(s => (
+              <motion.a key={s} href={`#${s}`} whileHover={{ y: -2, color: '#FF4A1C' }} className="transition-colors relative group">
                 {s}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FF4A1C] group-hover:w-full transition-all duration-300" />
               </motion.a>
@@ -144,8 +144,8 @@ export default function Home() {
           </button>
         </div>
         {mobileOpen && (
-          <motion.div initial={{ opacity:0, y:-20 }} animate={{ opacity:1, y:0 }} className="md:hidden bg-black/95 backdrop-blur-xl py-8 px-6 flex flex-col gap-6 border-t border-white/5">
-            {['rolls','burgers','drinks','locations'].map(s => (
+          <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="md:hidden bg-black/95 backdrop-blur-xl py-8 px-6 flex flex-col gap-6 border-t border-white/5">
+            {['rolls', 'burgers', 'drinks', 'locations'].map(s => (
               <a key={s} href={`#${s}`} onClick={() => setMobileOpen(false)} className="text-2xl font-bold capitalize hover:text-[#FF4A1C] transition-colors">{s}</a>
             ))}
           </motion.div>
@@ -160,9 +160,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,74,28,0.08),transparent_60%)]" />
         {/* Decorative spinning rings */}
         <div className="absolute top-[15%] left-[5%] w-[200px] h-[200px] rounded-full border border-dashed border-[#FF4A1C]/10 animate-spin-slow pointer-events-none" />
-        <div className="absolute bottom-[10%] right-[8%] w-[150px] h-[150px] rounded-full border border-dashed border-[#FFB01F]/15 animate-spin-slow pointer-events-none" style={{ animationDirection:'reverse' }} />
+        <div className="absolute bottom-[10%] right-[8%] w-[150px] h-[150px] rounded-full border border-dashed border-[#FFB01F]/15 animate-spin-slow pointer-events-none" style={{ animationDirection: 'reverse' }} />
 
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 w-full grid md:grid-cols-2 gap-12 items-center py-16">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full grid md:grid-cols-2 gap-12 items-center py-16">
           {/* Text slides from LEFT */}
           <motion.div style={{ y: heroY, opacity: heroOpacity }} variants={stagger} initial="hidden" animate="visible">
             <motion.div variants={fadeUp} className="flex items-center gap-3 mb-8">
@@ -172,7 +172,7 @@ export default function Home() {
               </span>
             </motion.div>
             <motion.h1 variants={fadeUp} className="text-6xl md:text-[6rem] font-black leading-[0.85] tracking-tight mb-8">
-              bolder,<br/><span className="text-[#FF4A1C]">better,</span><br/>tastier!
+              bolder,<br /><span className="text-[#FF4A1C]">better,</span><br />tastier!
             </motion.h1>
             <motion.p variants={fadeUp} className="text-xl text-stone-400 mb-8 max-w-md leading-relaxed">
               Don't snooze — Order now and get it hot & fresh. Every roll crafted with premium ingredients.
@@ -182,7 +182,7 @@ export default function Home() {
                 <span className="text-4xl font-black text-white">₹249</span>
                 <span className="text-white/80 text-sm ml-2">Only</span>
               </div>
-              <motion.a href="#burgers" whileHover={{ scale:1.05 }} whileTap={{ scale:0.95 }}
+              <motion.a href="#burgers" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 rounded-2xl border-2 border-white/20 hover:border-[#FF4A1C] font-bold transition-all hover:bg-[#FF4A1C]/10">
                 Full Menu ↓
               </motion.a>
@@ -194,17 +194,17 @@ export default function Home() {
           </motion.div>
 
           {/* Image slides from RIGHT (reverse) */}
-          <motion.div initial={{ opacity:0, x:100, rotate:10 }} animate={{ opacity:1, x:0, rotate:0 }} transition={{ duration:1, ease:'easeOut', delay:0.3 }}
+          <motion.div initial={{ opacity: 0, x: 100, rotate: 10 }} animate={{ opacity: 1, x: 0, rotate: 0 }} transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
             className="relative h-[400px] md:h-[550px] w-full">
             <div className="absolute inset-0 bg-[#FF4A1C]/20 rounded-full blur-[80px] animate-pulse" />
             <div className="relative w-full h-full animate-float">
               <Image src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=1000" alt="Signature Roll" fill
                 className="object-cover rounded-[40%] border-4 border-white/10 shadow-2xl" priority />
             </div>
-            <motion.div animate={{ rotate:360 }} transition={{ duration:20, repeat:Infinity, ease:'linear' }}
+            <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
               className="absolute -top-6 -left-6 w-28 h-28 rounded-full border-2 border-dashed border-[#FFB01F]/30 pointer-events-none" />
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#FFB01F] rounded-full flex items-center justify-center animate-float-delay shadow-xl">
-              <span className="text-black font-black text-xs text-center leading-tight">ORDER<br/>NOW</span>
+              <span className="text-black font-black text-xs text-center leading-tight">ORDER<br />NOW</span>
             </div>
           </motion.div>
         </div>
@@ -220,15 +220,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(255,176,31,0.05),transparent_60%)]" />
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#FF4A1C] to-transparent" />
         {/* Reverse spinning rings */}
-        <div className="absolute top-[20%] right-[5%] w-[180px] h-[180px] rounded-full border border-dashed border-[#FFB01F]/10 animate-spin-slow pointer-events-none" style={{ animationDirection:'reverse' }} />
+        <div className="absolute top-[20%] right-[5%] w-[180px] h-[180px] rounded-full border border-dashed border-[#FFB01F]/10 animate-spin-slow pointer-events-none" style={{ animationDirection: 'reverse' }} />
         <div className="absolute bottom-[15%] left-[3%] w-[120px] h-[120px] rounded-full border border-dashed border-[#FF4A1C]/10 animate-spin-slow pointer-events-none" />
 
-        <motion.div style={{ scale: burgerScale }} className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 w-full py-16">
+        <motion.div style={{ scale: burgerScale }} className="max-w-7xl mx-auto px-6 relative z-10 w-full py-16">
           {/* Title slides from RIGHT (reverse) */}
           <motion.div {...slideFromRight} viewport={vp} className="text-center mb-12">
             <p className="text-[#FFB01F] text-sm font-bold uppercase tracking-[0.3em] mb-4">Handcrafted Perfection</p>
             <h2 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-[#E8D8B0] to-[#FFB01F] bg-clip-text text-transparent">
-              The Ultimate<br/>Gourmet Smash
+              The Ultimate<br />Gourmet Smash
             </h2>
             <p className="text-stone-500 max-w-xl mx-auto text-lg">Double patties, melted artisan cheese, and our secret indulgent sauces.</p>
           </motion.div>
@@ -259,28 +259,28 @@ export default function Home() {
 
       {/* DRINKS */}
       <section id="drinks" ref={drinksRef} className="relative min-h-screen flex flex-col justify-center bg-[#F5EDD6] text-[#2A1F14] pt-16 overflow-hidden">
-        <motion.h2 initial={{ opacity:0 }} whileInView={{ opacity:0.06 }} viewport={vp}
+        <motion.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 0.06 }} viewport={vp}
           className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18vw] font-black uppercase whitespace-nowrap z-0 select-none tracking-tighter text-[#2A1F14]">
           DRINKS
         </motion.h2>
         <FloatingOrb className="w-[400px] h-[400px] bg-[#FF4A1C] bottom-[-100px] right-[-100px] opacity-10" />
         {/* Reverse spinning rings */}
-        <div className="absolute top-[12%] left-[8%] w-[160px] h-[160px] rounded-full border border-dashed border-[#C13A10]/10 animate-spin-slow pointer-events-none" style={{ animationDirection:'reverse' }} />
+        <div className="absolute top-[12%] left-[8%] w-[160px] h-[160px] rounded-full border border-dashed border-[#C13A10]/10 animate-spin-slow pointer-events-none" style={{ animationDirection: 'reverse' }} />
         <div className="absolute bottom-[20%] right-[6%] w-[200px] h-[200px] rounded-full border border-dashed border-[#FFB01F]/10 animate-spin-slow pointer-events-none" />
 
-        <motion.div style={{ y: drinksParallax, rotate: drinksRotate }} className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 w-full py-16">
+        <motion.div style={{ y: drinksParallax, rotate: drinksRotate }} className="max-w-7xl mx-auto px-6 relative z-10 w-full py-16">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             {/* Text slides from RIGHT (reverse of rolls hero) */}
             <motion.div {...slideFromRight} viewport={vp}>
               <p className="text-[#C13A10] text-sm font-bold uppercase tracking-[0.3em] mb-4">New Arrivals</p>
               <h2 className="text-5xl md:text-7xl font-black leading-[0.9] mb-6 text-[#2A1F14]">
-                Refreshing<br/><span className="text-[#C13A10]">Thickshakes</span>
+                Refreshing<br /><span className="text-[#C13A10]">Thickshakes</span>
               </h2>
               <p className="text-lg text-[#7a604f] mb-8 max-w-md">Perfectly blended to complement your signature roll. Made with real fruits and premium ice cream.</p>
               <div className="flex flex-wrap gap-4 text-sm text-[#7a604f]">
-                <motion.span whileHover={{ scale:1.05 }} className="flex items-center gap-2 bg-black/5 px-4 py-2 rounded-full cursor-default"><Star className="w-4 h-4 text-[#FFB01F]" /> 100% Natural</motion.span>
-                <motion.span whileHover={{ scale:1.05 }} className="flex items-center gap-2 bg-black/5 px-4 py-2 rounded-full cursor-default">❄️ Ice Cold</motion.span>
-                <motion.span whileHover={{ scale:1.05 }} className="flex items-center gap-2 bg-black/5 px-4 py-2 rounded-full cursor-default">🥤 Handcrafted</motion.span>
+                <motion.span whileHover={{ scale: 1.05 }} className="flex items-center gap-2 bg-black/5 px-4 py-2 rounded-full cursor-default"><Star className="w-4 h-4 text-[#FFB01F]" /> 100% Natural</motion.span>
+                <motion.span whileHover={{ scale: 1.05 }} className="flex items-center gap-2 bg-black/5 px-4 py-2 rounded-full cursor-default">❄️ Ice Cold</motion.span>
+                <motion.span whileHover={{ scale: 1.05 }} className="flex items-center gap-2 bg-black/5 px-4 py-2 rounded-full cursor-default">🥤 Handcrafted</motion.span>
               </div>
             </motion.div>
 
@@ -288,7 +288,7 @@ export default function Home() {
             <motion.div {...rotateIn} viewport={vp}
               className="relative h-[400px] md:h-[500px] w-full">
               <div className="absolute inset-8 bg-[#C13A10]/10 rounded-full blur-[60px]" />
-              <motion.div animate={{ rotate:-360 }} transition={{ duration:25, repeat:Infinity, ease:'linear' }}
+              <motion.div animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
                 className="absolute -top-4 -right-4 w-24 h-24 rounded-full border-2 border-dashed border-[#C13A10]/20 pointer-events-none" />
               <div className="relative w-full h-full animate-float">
                 <Image src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=1000" alt="Iced Chocolate Drink" fill
@@ -318,10 +318,10 @@ export default function Home() {
       <section id="locations" ref={locationsRef} className="py-28 bg-gradient-to-b from-[#FFF8EE] to-[#F5EAD8] relative overflow-hidden text-[#2A1F14]">
         {/* Decorative bg circles */}
         <div className="absolute top-[-150px] right-[-150px] w-[400px] h-[400px] rounded-full border-2 border-[#FF4A1C]/10 animate-spin-slow" />
-        <div className="absolute bottom-[-100px] left-[-100px] w-[300px] h-[300px] rounded-full border-2 border-[#FFB01F]/10 animate-spin-slow" style={{ animationDirection:'reverse' }} />
+        <div className="absolute bottom-[-100px] left-[-100px] w-[300px] h-[300px] rounded-full border-2 border-[#FFB01F]/10 animate-spin-slow" style={{ animationDirection: 'reverse' }} />
 
-        <motion.div style={{ scale: locScale }} className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once:false, amount:0.2 }} variants={stagger} className="text-center mb-20">
+        <motion.div style={{ scale: locScale }} className="max-w-6xl mx-auto px-6 relative z-10">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }} variants={stagger} className="text-center mb-20">
             <motion.p variants={fadeUp} className="text-[#FF4A1C] text-sm font-bold uppercase tracking-[0.3em] mb-4">📍 Visit Us</motion.p>
             <motion.h2 variants={fadeUp} className="text-5xl md:text-7xl font-black leading-tight">
               Find Us <span className="bg-gradient-to-r from-[#FF4A1C] to-[#FFB01F] bg-clip-text text-transparent">Near You</span>
@@ -346,7 +346,7 @@ export default function Home() {
             {/* Mangalore — slides from RIGHT (reverse direction) */}
             <motion.div {...slideFromRight} viewport={vp}
               className="bg-white/70 backdrop-blur-xl rounded-[2rem] p-10 border border-[#FFB01F]/10 shadow-[0_20px_60px_rgba(255,176,31,0.08)] hover:shadow-[0_30px_80px_rgba(255,176,31,0.15)] transition-all duration-500 group hover:-translate-y-2 relative overflow-hidden text-center">
-              <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full border-4 border-dashed border-[#FFB01F]/10 animate-spin-slow pointer-events-none" style={{ animationDirection:'reverse' }} />
+              <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full border-4 border-dashed border-[#FFB01F]/10 animate-spin-slow pointer-events-none" style={{ animationDirection: 'reverse' }} />
               <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-[#FFB01F] to-[#FF4A1C] flex items-center justify-center shadow-lg mx-auto mb-6">
                 <MapPin className="w-10 h-10 text-white" />
               </div>
@@ -361,11 +361,11 @@ export default function Home() {
           {/* CTA buttons */}
           <motion.div {...scaleUp} viewport={vp}
             className="mt-16 flex justify-center gap-5 flex-wrap">
-            <motion.a whileHover={{ scale:1.05 }} whileTap={{ scale:0.95 }} href="tel:+919876543210"
+            <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href="tel:+919876543210"
               className="flex items-center gap-3 bg-gradient-to-r from-[#FF4A1C] to-[#FFB01F] text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-[#FF4A1C]/20 hover:shadow-[#FF4A1C]/40 transition-shadow">
               <Phone className="w-5 h-5" /> Call Us Now
             </motion.a>
-            <motion.a whileHover={{ scale:1.05 }} whileTap={{ scale:0.95 }} href="#rolls"
+            <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href="#rolls"
               className="flex items-center gap-3 bg-[#2A1F14] text-white px-8 py-4 rounded-full font-bold hover:bg-[#3d2e1f] transition-colors">
               <Flame className="w-5 h-5 text-[#FF4A1C]" /> Order Now
             </motion.a>
@@ -376,14 +376,14 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="py-14 bg-[#0A0908] border-t border-white/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(255,74,28,0.05),transparent_60%)]" />
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
             <div className="flex items-center gap-2">
               <Flame className="w-6 h-6 text-[#FF4A1C]" />
               <span className="text-2xl font-black tracking-tighter"><span className="text-[#FF4A1C]">BIG FAT</span> ROLL</span>
             </div>
             <div className="flex gap-8 text-sm font-bold uppercase tracking-widest text-stone-500">
-              {['rolls','burgers','drinks','locations'].map(s => (
+              {['rolls', 'burgers', 'drinks', 'locations'].map(s => (
                 <a key={s} href={`#${s}`} className="hover:text-[#FF4A1C] transition-colors capitalize">{s}</a>
               ))}
             </div>
